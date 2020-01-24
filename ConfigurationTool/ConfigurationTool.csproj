@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{841BB644-9F7F-4193-836B-27865D404405}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Generations_Launcher_Front</RootNamespace>
+    <AssemblyName>ConfigurationTool</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>ConfigurationTool.ico</ApplicationIcon>
+    <StartupObject>Generations_Launcher_Front.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AATypes.cs" />
+    <Compile Include="AdapterInfo.cs" />
+    <Compile Include="AdvancedConfiguration.Designer.cs">
+      <DependentUpon>AdvancedConfiguration.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AudioConfiguration.Designer.cs">
+      <DependentUpon>AudioConfiguration.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AudioInfo.cs" />
+    <Compile Include="ButtonConfig.cs" />
+    <Compile Include="DisplayModes.cs" />
+    <Compile Include="DllExterns.cs" />
+    <Compile Include="FileHandler.cs" />
+    <Compile Include="GlobalDefs.cs" />
+    <Compile Include="GraphicsConfiguration.Designer.cs">
+      <DependentUpon>GraphicsConfiguration.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="InputConfiguration.Designer.cs">
+      <DependentUpon>InputConfiguration.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LowHigh.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnOff.cs" />
+    <Compile Include="OutputAdapterInfo.cs" />
+    <Compile Include="OutputConfig.cs" />
+    <Compile Include="PadInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RegistryData.cs" />
+    <Compile Include="Resolution.cs" />
+    <Compile Include="sPressInfo.cs" />
+    <Compile Include="StatsConfiguration.Designer.cs">
+      <DependentUpon>StatsConfiguration.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="TextStore\LocalizedText.Designer.cs">
+      <DependentUpon>LocalizedText.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdvancedConfiguration.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AdvancedConfiguration.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AudioConfiguration.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AudioConfiguration.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphicsConfiguration.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>GraphicsConfiguration.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputConfiguration.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>InputConfiguration.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatsConfiguration.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>StatsConfiguration.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextStore\LocalizedText.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizedText.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Externals\DXInputHandler.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
